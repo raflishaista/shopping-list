@@ -57,12 +57,15 @@
         Logout
     </button>
 </a>
+<br>
+<img src="https://th.bing.com/th/id/OIG.LpEoEsSo5x.yKtKsSq30?w=270&h=270&c=6&r=0&o=5&dpr=1.5&pid=ImgGn" alt="god">
 
 <script>
     async function getProducts() {
         return fetch("{% url 'main:get_product_json' %}").then((res) => res.json())
     }
     async function refreshProducts() {
+        print("aaiie")
         document.getElementById("product_table").innerHTML = ""
         const products = await getProducts()
         let htmlString = `<tr>
